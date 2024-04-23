@@ -2,9 +2,9 @@
 #!/bin/bash
 
 # Define variables
-namespace="your-namespace"
-deployment="your-deployment"
-max_restarts=3
+namespace="sre"
+deployment="swype-deployment,yml"
+max_restarts=4
 
 while true; do
 restarts=$(kubectl get pods -n $namespace | grep $deployment | awk '{print $4}')
